@@ -1,0 +1,25 @@
+:root {
+  --bg-color: #019dd5;
+  --bg-color-disable: #919191;
+}
+
+.button {
+  background-color: var(--bg-color);
+  color: #eeeeee;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border: none;
+  outline: none;
+  min-width: 10rem;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button:disabled {
+  background-color: var(--bg-color-disable);
+  color: #eeeeee;
+  cursor: auto;
+}

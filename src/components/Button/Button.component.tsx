@@ -1,9 +1,16 @@
 import React from "react";
+import styles from "./Button.module.css";
+
 interface ButtonProps {
-  primary: boolean;
+  active: boolean;
+  label: string;
 }
 const Button = (props: ButtonProps) => {
-  return <button>AAA</button>;
+  return (
+    <button className={styles.button} disabled={props.active}>
+      {props.label}
+    </button>
+  );
 };
 
 export default Button;

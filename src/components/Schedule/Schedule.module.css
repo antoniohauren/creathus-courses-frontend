@@ -2,12 +2,12 @@
     --icon-color: #019dd5;
 }
 
-div.startApplet {
+div.schedule {
   display: flex;
   align-items: center;
 }
 
-div.startApplet svg {
+div.schedule svg {
   color: var(--icon-color);
   width: 1.5rem;
   padding: 0.5rem;

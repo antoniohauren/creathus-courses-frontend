@@ -2,12 +2,12 @@ import React from "react";
 import styles from "./Button.module.css";
 
 interface ButtonProps {
-  active: boolean;
+  active?: boolean;
   label: string;
 }
-const Button = (props: ButtonProps) => {
+const Button = ({ active = true, ...props }: ButtonProps) => {
   return (
-    <button className={styles.button} disabled={props.active}>
+    <button className={styles.button} disabled={!active}>
       {props.label}
     </button>
   );

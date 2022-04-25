@@ -6,6 +6,12 @@ import Schedule from "./Schedule.component";
 export default {
   title: "Components/Schedule",
   component: Schedule,
+  argTypes: {
+    variant: {
+      options: ["start", "end"],
+      control: { type: "radio" },
+    },
+  },
 } as ComponentMeta<typeof Schedule>;
 
 const Template: ComponentStory<typeof Schedule> = (args) => (
@@ -13,8 +19,13 @@ const Template: ComponentStory<typeof Schedule> = (args) => (
 );
 
 export const Start = Template.bind({});
-
 Start.args = {
   timeDate: new Date().toISOString(),
-  type: "start",
+  variant: "start",
+};
+
+export const End = Template.bind({});
+End.args = {
+  timeDate: new Date().toISOString(),
+  variant: "end",
 };

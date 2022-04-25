@@ -3,10 +3,10 @@ import styles from "./Schedule.module.css";
 
 interface ScheduleProps {
   timeDate: string;
-  type: "start" | "end";
+  variant: "start" | "end";
 }
 
-const Schedule = ({ timeDate, type, ...props }: ScheduleProps) => {
+const Schedule = ({ timeDate, variant, ...props }: ScheduleProps) => {
   const [dateString, setDateString] = useState("");
   // TODO: receive formated date from backend
   useEffect(() => {
@@ -21,12 +21,10 @@ const Schedule = ({ timeDate, type, ...props }: ScheduleProps) => {
       minute: "2-digit",
     });
 
-    console.log(type);
-
-    type === "start"
+    variant === "start"
       ? setDateString(`${dayMonth} às ${hour}`)
       : setDateString(`${dayMonth}`);
-  }, [timeDate, type]);
+  }, [timeDate, variant]);
 
   return (
     <div className={styles.schedule}>
@@ -45,7 +43,7 @@ const Schedule = ({ timeDate, type, ...props }: ScheduleProps) => {
         />
       </svg>
       <div className={styles.dateText}>
-        {type === "start" ? <p>inicio em</p> : <p>término</p>}
+        {variant === "start" ? <p>inicio em</p> : <p>término</p>}
         <p data-testid="dateString">{dateString}</p>
       </div>
     </div>

@@ -20,6 +20,7 @@ const Schedule = ({ timeDate, variant, ...props }: ScheduleProps) => {
     const hour = date.toLocaleTimeString("pt-BR", {
       hour: "2-digit",
       minute: "2-digit",
+      timeZone: "America/Fortaleza",
     });
 
     variant === "start"

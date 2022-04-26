@@ -1,0 +1,31 @@
+:root {
+  --icon-color: #019dd5;
+  --text-color: #656565;
+}
+
+div.lessons {
+  display: flex;
+  align-items: center;
+  min-width: 20rem;
+  max-width: 20rem;
+  height: 5rem;
+}
+
+div.lessons svg {
+  color: var(--icon-color);
+  width: 1.5rem;
+  min-width: 1.5rem;
+  padding: 0.5rem;
+}
+
+div.lessons p {
+  text-transform: uppercase;
+  color: var(--text-color);
+  margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}

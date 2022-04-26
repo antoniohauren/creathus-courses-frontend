@@ -1,5 +1,6 @@
 :root {
     --icon-color: #019dd5;
+    --text-color: #656565;
 }
 
 div.schedule {
@@ -14,6 +15,7 @@ div.schedule svg {
 }
 
 div.dateText p {
+  color: var(--text-color);
   margin: 0;
 }
 

@@ -31,7 +31,8 @@ TotalTime.args = {
 export const Instructors = Template.bind({});
 Instructors.args = {
   variant: "instructors",
-  content: "Antonio carlos, Daniel queiroz",
+  content:
+    "antonio carlos, edson da silva, pedro freitas silva, taniro rodrigues",
 };
 
 export const Location = Template.bind({});

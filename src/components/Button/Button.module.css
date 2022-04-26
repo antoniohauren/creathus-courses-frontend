@@ -12,6 +12,7 @@
   border: none;
   outline: none;
   min-width: 10rem;
+  margin: 1rem;
 }
 
 .button:hover {

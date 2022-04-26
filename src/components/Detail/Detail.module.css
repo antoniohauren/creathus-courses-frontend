@@ -3,22 +3,23 @@
   --text-color: #656565;
 }
 
-div.lessons {
+div.detail {
   display: flex;
   align-items: center;
-  min-width: 20rem;
-  max-width: 20rem;
-  height: 5rem;
+  min-width: 10rem;
+  max-width: 15rem;
+  height: 4rem;
+  margin: 1rem;
 }
 
-div.lessons svg {
+div.detail svg {
   color: var(--icon-color);
   width: 1.5rem;
   min-width: 1.5rem;
   padding: 0.5rem;
 }
 
-div.lessons p {
+div.detail p {
   text-transform: uppercase;
   color: var(--text-color);
   margin: 0;

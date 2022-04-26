@@ -1,11 +1,12 @@
 :root {
-    --icon-color: #019dd5;
-    --text-color: #656565;
+  --icon-color: #019dd5;
+  --text-color: #656565;
 }
 
 div.schedule {
   display: flex;
   align-items: center;
+  margin: 1rem;
 }
 
 div.schedule svg {

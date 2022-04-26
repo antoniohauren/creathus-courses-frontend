@@ -25,7 +25,7 @@ const Detail = ({ variant, content, ...props }: DetailProps) => {
   };
 
   return (
-    <div className={styles.lessons}>
+    <div className={styles.detail}>
       {getIcon()}
       <p data-testid="content">{content}</p>
     </div>

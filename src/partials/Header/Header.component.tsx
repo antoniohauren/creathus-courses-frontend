@@ -3,7 +3,11 @@ import styles from "./Header.module.css";
 
 import logo from "../../../public/imgs/logo.png";
 
-const Header = () => {
+interface HeaderProps {
+  authenticatedUser?: string;
+}
+
+const Header = ({ authenticatedUser }: HeaderProps) => {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
@@ -23,13 +27,21 @@ const Header = () => {
         </a>
       </nav>
       <div className={styles.profileSec}>
-        <a className={styles.loginItem} href="/">
-          Entrar
-        </a>
-        /
-        <a className={styles.loginItem} href="/">
-          Cadastrar
-        </a>
+        {!authenticatedUser ? (
+          <>
+            <a className={styles.loginItem} href="/">
+              Entrar
+            </a>
+            /
+            <a className={styles.loginItem} href="/">
+              Cadastrar
+            </a>
+          </>
+        ) : (
+          <a href="/" className={styles.user} data-testid="user">
+            {authenticatedUser}
+          </a>
+        )}
       </div>
     </header>
   );

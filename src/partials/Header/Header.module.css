@@ -17,12 +17,12 @@ header.header {
 
 div.logo,
 a.navItem,
-a.loginItem {
+a.loginItem,
+a.user {
   color: var(--text-color);
 }
 
 header.header div.logo {
-  /* padding: 1rem; */
   display: flex;
   align-items: center;
   font-size: 2rem;
@@ -50,11 +50,19 @@ a.navItem {
 
 div.profileSec {
   font-weight: 600;
+  min-width: 10rem;
+  text-align: right;
 }
 
 a.navItem,
-a.loginItem {
+a.loginItem,
+a.user {
   text-decoration: none;
+}
+
+p {
+  padding: 0;
+  margin: 0;
 }
 
 @media screen and (min-width: 600px) {

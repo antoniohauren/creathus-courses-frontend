@@ -8,7 +8,14 @@ export default {
   component: Header,
 } as ComponentMeta<typeof Header>;
 
-const Template: ComponentStory<typeof Header> = (args) => <Header />;
+const Template: ComponentStory<typeof Header> = (args) => <Header {...args} />;
 
 export const Unauthenticated = Template.bind({});
-Unauthenticated.args = {};
+Unauthenticated.args = {
+  authenticatedUser: "",
+};
+
+export const Authenticated = Template.bind({});
+Authenticated.args = {
+  authenticatedUser: "Antonio",
+};

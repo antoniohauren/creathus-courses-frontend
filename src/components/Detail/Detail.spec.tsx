@@ -16,4 +16,9 @@ describe("Detail", () => {
     render(<Lessons variant="instructors" content="fake name" />);
     expect(screen.getByTestId("content")).toHaveTextContent(/fake name/i);
   });
+
+  it("Should render the location details", () => {
+    render(<Lessons variant="location" content="campus natal" />);
+    expect(screen.getByTestId("content")).toHaveTextContent(/campus/i);
+  });
 });

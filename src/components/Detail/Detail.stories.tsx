@@ -8,7 +8,7 @@ export default {
   component: Detail,
   argTypes: {
     variant: {
-      options: ["lessons", "time", "instructors"],
+      options: ["lessons", "time", "instructors", "location"],
       control: { type: "radio" },
     },
   },
@@ -32,4 +32,10 @@ export const Instructors = Template.bind({});
 Instructors.args = {
   variant: "instructors",
   content: "Antonio carlos, Daniel queiroz",
+};
+
+export const Location = Template.bind({});
+Location.args = {
+  variant: "location",
+  content: "campus manaus",
 };

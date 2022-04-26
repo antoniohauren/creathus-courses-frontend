@@ -1,5 +1,5 @@
 :root {
-  --text-color: #004596;
+  --header-text-color: #004596;
 }
 
 header.header {
@@ -19,7 +19,7 @@ div.logo,
 a.navItem,
 a.loginItem,
 a.user {
-  color: var(--text-color);
+  color: var(--header-text-color);
 }
 
 header.header div.logo {
@@ -60,7 +60,7 @@ a.user {
   text-decoration: none;
 }
 
-p {
+div.profileSec p {
   padding: 0;
   margin: 0;
 }

@@ -28,6 +28,7 @@
   "jest": {
     "collectCoverageFrom": [
       "<rootDir>/src/components/**/*.component.tsx",
+      "<rootDir>/src/partials/**/*.component.tsx",
       "!**/node_modules/**",
       "!**/*.stories.{ts/tsx}"
     ]

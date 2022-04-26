@@ -3,9 +3,10 @@ import styles from "./Detail.module.css";
 
 import { ReactComponent as BookIcon } from "../../../public/svgs/book.svg";
 import { ReactComponent as ClockIcon } from "../../../public/svgs/clock.svg";
+import { ReactComponent as UserIcon } from "../../../public/svgs/user.svg";
 
 interface DetailProps {
-  variant: "lessons" | "time";
+  variant: "lessons" | "time" | "instructors";
   content: string;
 }
 const Detail = ({ variant, content, ...props }: DetailProps) => {
@@ -15,6 +16,8 @@ const Detail = ({ variant, content, ...props }: DetailProps) => {
         return <BookIcon />;
       case "time":
         return <ClockIcon />;
+      case "instructors":
+        return <UserIcon />;
     }
   };
 

@@ -6,6 +6,12 @@ import Detail from "./Detail.component";
 export default {
   title: "Components/Detail",
   component: Detail,
+  argTypes: {
+    variant: {
+      options: ["lessons", "time"],
+      control: { type: "radio" },
+    },
+  },
 } as ComponentMeta<typeof Detail>;
 
 const Template: ComponentStory<typeof Detail> = (args) => <Detail {...args} />;
@@ -14,4 +20,10 @@ export const Lessons = Template.bind({});
 Lessons.args = {
   variant: "lessons",
   content: "3 AULAS",
+};
+
+export const TotalTime = Template.bind({});
+TotalTime.args = {
+  variant: "time",
+  content: "12H Total",
 };

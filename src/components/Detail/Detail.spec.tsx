@@ -6,4 +6,9 @@ describe("Detail", () => {
     render(<Lessons variant="lessons" content="3 aulas" />);
     expect(screen.getByTestId("content")).toHaveTextContent(/aulas/i);
   });
+
+  it("Should render the time details", () => {
+    render(<Lessons variant="time" content="12h total" />);
+    expect(screen.getByTestId("content")).toHaveTextContent(/total/i);
+  });
 });

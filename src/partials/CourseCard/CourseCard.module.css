@@ -1,0 +1,66 @@
+:root {
+  --trail-base-color: #464646;
+  --trail-name-color: #019dd5;
+  --icon-color: #019dd5;
+  --box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  --header-color: #f5fcff;
+  --separator: 1px solid #f3f3f3;
+  --alert-color: #ffeba3;
+}
+
+article.card * {
+  box-sizing: border-box;
+}
+
+article.card {
+  max-width: 20rem;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+}
+
+section.header {
+  background-color: var(--header-color);
+  width: 100%;
+  padding: 1rem;
+}
+
+section.header > div > h2 {
+  color: var(--trail-base-color);
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+section.header > div > h2 > span {
+  color: var(--trail-name-color);
+}
+
+section.header > h3 {
+  color: var(--trail-base-color);
+}
+
+section.body {
+  padding: 1rem;
+}
+
+section.footer > p {
+  background-color: var(--alert-color);
+  border-radius: 1rem;
+  margin: 0.5rem 1rem;
+  padding-block: 0.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+section.footer > div {
+  padding: 1rem;
+  width: 100%;
+}
+
+.line {
+  display: flex;
+  gap: 2rem;
+  border-bottom: var(--separator);
+}

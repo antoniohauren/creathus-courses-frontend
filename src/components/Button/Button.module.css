@@ -1,5 +1,5 @@
 :root {
-  --bg-color: #019dd5;
+  --bg-color: #00b9ff;
   --bg-color-disable: #919191;
 }
 
@@ -12,7 +12,7 @@
   border: none;
   outline: none;
   min-width: 10rem;
-  margin: 1rem;
+  width: 100%;
 }
 
 .button:hover {

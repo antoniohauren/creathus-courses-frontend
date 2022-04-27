@@ -6,16 +6,17 @@
 div.detail {
   display: flex;
   align-items: center;
-  min-width: 10rem;
-  max-width: 15rem;
+  /* margin: 1rem; */
+  min-width: 5rem;
+  width: 100%;
+  max-width: 10rem;
   height: 4rem;
-  margin: 1rem;
 }
 
 div.detail svg {
   color: var(--icon-color);
   width: 1.5rem;
-  min-width: 1.5rem;
+  min-width: 2.5rem;
   padding: 0.5rem;
 }
 

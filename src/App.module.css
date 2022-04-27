@@ -1,11 +1,43 @@
 main.content {
-  width: 80%;
+  width: 90%;
   margin-inline: auto;
-  padding-block: 2rem;
 }
-main.content > div {
-  display: grid;
+
+div.cards {
+  /* sad reactions only */
+  /* display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-  grid-template-rows: masonry;
-  gap: 2rem;
+  grid-template-rows: mansory;
+  gap: 2rem; */
+
+  columns: 1;
+  column-gap: 2rem;
+}
+
+div.cards > article {
+  break-inside: avoid;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  div.cards {
+    columns: 2;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  main.content {
+    width: 80%;
+  }
+  div.cards {
+    columns: 3;
+    column-gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  div.cards {
+    columns: 4;
+    column-gap: 2rem;
+  }
 }

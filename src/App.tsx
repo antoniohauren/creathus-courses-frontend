@@ -10,7 +10,7 @@ function App() {
 
       <main className={styles.content}>
         <h1>Cursos</h1>
-        <div className="cards">
+        <div className={styles.cards}>
           {Array(8)
             .fill(Math.random())
             .map((e, i) => {

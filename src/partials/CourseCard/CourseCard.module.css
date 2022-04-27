@@ -61,6 +61,6 @@ section.footer > div {
 
 .line {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   border-bottom: var(--separator);
 }

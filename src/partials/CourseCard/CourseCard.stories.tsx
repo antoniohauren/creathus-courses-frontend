@@ -19,7 +19,7 @@ Closed.args = {
   start_time: new Date().toISOString(),
   end_time: new Date().toISOString(),
   lessons: "5",
-  lessons_time: "60",
+  lessons_time: 60,
   instructors: ["teste 1", "test2", "teste3"],
   location: "campus manaus",
   registrations_on: "11/05",
@@ -32,7 +32,7 @@ RegistrationsOn.args = {
   start_time: new Date().toISOString(),
   end_time: new Date().toISOString(),
   lessons: "5",
-  lessons_time: "60",
+  lessons_time: 60,
   instructors: ["teste 1", "test2", "teste3"],
   location: "campus manaus",
 };

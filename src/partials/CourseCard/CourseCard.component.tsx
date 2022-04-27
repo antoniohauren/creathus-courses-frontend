@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Button from "../../components/Button/Button.component";
 import Detail from "../../components/Detail/Detail.component";
 import Schedule from "../../components/Schedule/Schedule.component";
@@ -10,7 +10,7 @@ interface CourseCardProps {
   start_time: string;
   end_time: string;
   lessons: string;
-  lessons_time: string;
+  lessons_time: number;
   location: string;
   registrations_on?: string;
   instructors: string[];
@@ -27,6 +27,16 @@ const CourseCard = ({
   registrations_on,
   instructors,
 }: CourseCardProps) => {
+  const [convertedTime, setConvertedTime] = useState("");
+
+  useEffect(() => {
+    if (lessons_time >= 60) {
+      setConvertedTime(`${(lessons_time / 60).toFixed(0)}H`);
+    } else {
+      setConvertedTime(`${lessons_time}M`);
+    }
+  }, [lessons_time]);
+
   return (
     <article className={styles.card}>
       <section className={styles.header}>
@@ -46,7 +56,7 @@ const CourseCard = ({
 
         <div className={styles.line}>
           <Detail content={`${lessons} aulas`} variant="lessons" />
-          <Detail content={`${lessons_time}h total`} variant="time" />
+          <Detail content={`${convertedTime} total`} variant="time" />
         </div>
 
         <div className={styles.line}>

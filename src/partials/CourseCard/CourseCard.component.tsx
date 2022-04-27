@@ -4,7 +4,7 @@ import Detail from "../../components/Detail/Detail.component";
 import Schedule from "../../components/Schedule/Schedule.component";
 import styles from "./CourseCard.module.css";
 
-import { ReactComponent as AndroidIcon } from "../../../public/svgs/android-logo.svg";
+import { ReactComponent as AndroidIcon } from "../../assets/svgs/android-logo.svg";
 
 interface CourseCardProps {
   trail: string;

@@ -1,0 +1,11 @@
+main.content {
+  width: 80%;
+  margin-inline: auto;
+  padding-block: 2rem;
+}
+main.content > div {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  grid-template-rows: masonry;
+  gap: 2rem;
+}

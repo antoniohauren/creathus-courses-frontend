@@ -1,8 +1,6 @@
 import React from "react";
 import styles from "./Header.module.css";
 
-import logo from "../../../public/imgs/logo.png";
-
 interface HeaderProps {
   authenticatedUser?: string;
 }
@@ -11,7 +9,7 @@ const Header = ({ authenticatedUser }: HeaderProps) => {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <img src={logo} alt="Samsung Ocean logo" />
+        <img src={"/imgs/logo.png"} alt="Samsung Ocean logo" />
         ocean
       </div>
 

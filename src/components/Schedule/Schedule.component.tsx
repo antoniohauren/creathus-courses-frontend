@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Schedule.module.css";
-import { ReactComponent as CalendarIcon } from "../../../public/svgs/calendar.svg";
+import { ReactComponent as CalendarIcon } from "../../assets/svgs/calendar.svg";
 
 interface ScheduleProps {
   timeDate: string;

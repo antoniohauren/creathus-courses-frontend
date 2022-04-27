@@ -4,6 +4,8 @@ import Detail from "../../components/Detail/Detail.component";
 import Schedule from "../../components/Schedule/Schedule.component";
 import styles from "./CourseCard.module.css";
 
+import { ReactComponent as AndroidIcon } from "../../../public/svgs/android-logo.svg";
+
 interface CourseCardProps {
   trail: string;
   title: string;
@@ -44,6 +46,8 @@ const CourseCard = ({
           <h2>
             TRILHA <span>{trail}</span>
           </h2>
+
+          <AndroidIcon />
         </div>
         <h3>{title}</h3>
       </section>

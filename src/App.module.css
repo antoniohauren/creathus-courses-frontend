@@ -3,6 +3,9 @@ main.content {
   margin-inline: auto;
 }
 
+h1 {
+  font-weight: 500;
+}
 div.cards {
   /* sad reactions only */
   /* display: grid;

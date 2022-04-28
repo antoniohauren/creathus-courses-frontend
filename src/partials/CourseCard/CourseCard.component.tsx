@@ -9,9 +9,9 @@ import { ReactComponent as AndroidIcon } from "../../assets/svgs/android-logo.sv
 interface CourseCardProps {
   trail: string;
   title: string;
-  start_time: string;
+  start_time: string[];
   end_time: string;
-  lessons: string;
+  lessons: number;
   lessons_time: number;
   location: string;
   registrations_on?: string;
@@ -33,7 +33,7 @@ const CourseCard = ({
 
   useEffect(() => {
     if (lessons_time >= 60) {
-      setConvertedTime(`${(lessons_time / 60).toFixed(0)}H`);
+      setConvertedTime(`${Math.ceil(lessons_time / 60)}H`);
     } else {
       setConvertedTime(`${lessons_time}M`);
     }

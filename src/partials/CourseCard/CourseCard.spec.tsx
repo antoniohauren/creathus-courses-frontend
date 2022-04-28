@@ -5,9 +5,9 @@ describe("CourseCard", () => {
   const closedProps = {
     trail: "android",
     title: "Webservices com Retrofit e imagens glide",
-    start_time: new Date().toISOString(),
-    end_time: new Date().toISOString(),
-    lessons: "5",
+    start_time: ["11/05", "11:50"],
+    end_time: "11/05",
+    lessons: 5,
     lessons_time: 120,
     instructors: ["teste 1", "test2", "teste3"],
     location: "campus manaus",

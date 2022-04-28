@@ -1,9 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import CourseCard from "./partials/CourseCard/CourseCard.component";
 import Header from "./partials/Header/Header.component";
 import styles from "./App.module.css";
 
+interface Course {
+  id: string;
+  title: string;
+  instructors: string[];
+  lesson_count: number;
+  total_duration: number;
+  location: string;
+  open_date: string;
+  end_date: string;
+  start_date: string[];
+  trail: { id: string; name: string };
+}
+
 function App() {
+  const [courses, setCourses] = useState<Course[]>([]);
+
+  useEffect(() => {
+    (async () => {
+      const r = await fetch("http://localhost:5000/courses");
+      const crs = await r.json();
+      console.log(crs);
+      setCourses(crs);
+    })();
+  }, []);
+
   return (
     <>
       <Header />
@@ -11,29 +35,24 @@ function App() {
       <main className={styles.content}>
         <h1>Cursos</h1>
         <div className={styles.cards}>
-          {Array(8)
-            .fill(Math.random())
-            .map((e, i) => {
-              return (
-                <CourseCard
-                  key={e}
-                  {...{
-                    trail: "android",
-                    title:
-                      i === 2
-                        ? "Webservices com Retrofit e imagens glide"
-                        : "Webservices com Retrofit",
-                    start_time: new Date().toISOString(),
-                    end_time: new Date().toISOString(),
-                    lessons: "5",
-                    lessons_time: 60,
-                    instructors: ["teste 1", "test2", "teste3"],
-                    location: "campus manaus",
-                    registrations_on: "11/05",
-                  }}
-                />
-              );
-            })}
+          {courses?.map((e, i) => {
+            return (
+              <CourseCard
+                key={e.id}
+                {...{
+                  trail: e.trail.name,
+                  title: e.title,
+                  start_time: e.start_date,
+                  end_time: e.end_date,
+                  lessons: e.lesson_count,
+                  lessons_time: e.total_duration,
+                  instructors: e.instructors,
+                  location: e.location,
+                  registrations_on: e.open_date,
+                }}
+              />
+            );
+          })}
         </div>
       </main>
     </>

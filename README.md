@@ -36,6 +36,26 @@ or
 yarn start
 ```
 
+# Documentation
+to start storybook run
+
+```
+npm run storybook
+```
+or
+```
+yarn storybook
+```
+
+then open on the browser
+
+```
+http://localhost:6006
+```
+
+![image](https://user-images.githubusercontent.com/101012531/165841628-f2a21973-dcfa-4d84-9929-d1002cc87375.png)
+
+
 # Tests
 
 to run the tests and/or check the coverage run

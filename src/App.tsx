@@ -55,6 +55,8 @@ function App() {
             );
           })}
         </div>
+
+        <p className={styles.more}>Ver Tudo</p>
       </main>
 
       <Footer />

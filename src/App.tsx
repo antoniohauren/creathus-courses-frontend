@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import CourseCard from "./partials/CourseCard/CourseCard.component";
 import Header from "./partials/Header/Header.component";
 import styles from "./App.module.css";
+import Footer from "./partials/Footer/Footer.component";
 
 interface Course {
   id: string;
@@ -55,6 +56,8 @@ function App() {
           })}
         </div>
       </main>
+
+      <Footer />
     </>
   );
 }

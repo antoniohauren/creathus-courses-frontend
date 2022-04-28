@@ -1,3 +1,8 @@
+:root {
+  --more-text: #6f6f6f;
+  --more-bg: #f8f8f8;
+}
+
 main.content {
   width: 90%;
   margin-inline: auto;
@@ -21,6 +26,17 @@ div.cards {
 div.cards > article {
   break-inside: avoid;
   margin-bottom: 2rem;
+}
+
+p.more {
+  background-color: var(--more-bg);
+  color: var(--more-text);
+  text-align: center;
+  padding-block: 1rem;
+}
+
+p.more:hover {
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {

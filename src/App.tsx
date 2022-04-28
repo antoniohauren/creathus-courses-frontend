@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import CourseCard from "./partials/CourseCard/CourseCard.component";
 import Header from "./partials/Header/Header.component";
 import styles from "./App.module.css";
+import Footer from "./partials/Footer/Footer.component";
 
 interface Course {
   id: string;
@@ -21,10 +22,9 @@ function App() {
 
   useEffect(() => {
     (async () => {
-      const r = await fetch("http://localhost:5000/courses");
-      const crs = await r.json();
-      console.log(crs);
-      setCourses(crs);
+      const result = await fetch(`${process.env.REACT_APP_API_URL}/courses`);
+      console.log(result);
+      setCourses(await result.json());
     })();
   }, []);
 
@@ -54,7 +54,11 @@ function App() {
             );
           })}
         </div>
+
+        <p className={styles.more}>Ver Tudo</p>
       </main>
+
+      <Footer />
     </>
   );
 }

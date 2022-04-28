@@ -1,0 +1,44 @@
+:root {
+  --footer-color: #ececec;
+  --footer-text-normal: #6f6f6f;
+  --footer-text-light: #acacac;
+  --header-text-color: #004596;
+}
+
+footer.footer {
+  margin-top: 2rem;
+  background-color: var(--footer-color);
+  padding: 3rem;
+  flex-grow: 1;
+}
+
+footer.footer > div.content {
+  max-width: 30rem;
+  margin-inline: auto;
+  text-align: center;
+}
+
+footer.footer p:first-of-type {
+  padding-inline: 3rem;
+  color: var(--footer-text-normal);
+}
+
+footer.footer p:last-of-type {
+  color: var(--footer-text-light);
+  margin-top: 2rem;
+}
+
+footer.footer div.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: var(--header-text-color);
+}
+
+div.logo img {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.5rem;
+}

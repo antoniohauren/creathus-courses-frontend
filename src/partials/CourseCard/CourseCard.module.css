@@ -2,8 +2,8 @@
   --trail-base-color: #464646;
   --trail-name-color: #019dd5;
   --icon-color: #019dd5;
-  --box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
-    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  --card-border: 1px solid rgba(27, 31, 35, 0.15);
+  --box-shadow: rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
   --header-color: #f5fcff;
   --separator: 1px solid #f3f3f3;
   --alert-color: #ffeba3;
@@ -19,7 +19,7 @@ article.card {
   max-width: 25rem;
   border-radius: 1.5rem;
   overflow: hidden;
-  box-shadow: var(--box-shadow);
+  border: var(--card-border);
 }
 
 section.header {
